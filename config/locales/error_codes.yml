@@ -1,0 +1,34 @@
+errors:
+  invalid_resource:
+    code: '1'
+    status: '400'
+    title: 'Bad Request'
+  parameter_missing:
+    code: '2'
+    status: '400'
+    title: 'Bad Request'    
+  not_found:
+    code: '3'
+    status: '404'
+    title: 'Not Found'
+    details: 'Record not found'
+  no_route_found:
+    code: '4'
+    status: '404'
+    title: 'Not Found'
+    details: 'No route matches'
+  no_action_found:
+    code: '5'
+    status: '404'
+    title: 'Not Found'
+    details: 'No action found'
+  unprocessable_entity:
+    code: '6'
+    status: '422'
+    title: 'Unprocessable Entity'
+    details: 'Validation failed'
+  internal_server_error:
+    code: '7'
+    status: '500'
+    title: 'Internal server error'
+    details: 'Server error'
