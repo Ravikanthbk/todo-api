@@ -5,25 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.6.6
 
-* System dependencies
+* Rails version: 6.0.4
 
-* Configuration
+* System configuration
+  -- Linxu / Mac
+  -- Run 'bundle install' in the root folder to install all the application related dependencies
 
 * Database creation
+  -- bin/rails db:create
 
 * Database initialization
+  -- bin/rails db:migrate
 
 * How to run the test suite
+  -- bundle exec rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* Documentation:
+  -- Implemented the assignment with 100% rspec code coverage
+  -- todo API Error handling is implemented as per jsonapi standards: (https://jsonapi.org/format/#errors)
+  -- Implemented rails logging using Logstash and logstash-event gems to generate JSON logs in the json_event format
+  -- Implemented API pagination for Task and Tags API's using pagy & pager_api light weight gems
+  -- Implemented rubocop - Automatic Rails code style checking tool. A RuboCop extension focused on enforcing Rails best  practices and coding conventions.
+  -- Implemented brakeman - Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
 
-* Deployment instructions
-
-* ...
-
-
-Documentation:
-Error handling how it should look as per jsonapi standards:
-https://jsonapi.org/format/#errors
