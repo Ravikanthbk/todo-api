@@ -30,3 +30,11 @@ Things you may want to cover:
   -- Implemented rubocop - Automatic Rails code style checking tool. A RuboCop extension focused on enforcing Rails best  practices and coding conventions.
   -- Implemented brakeman - Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
 
+### ER Diagram
+![Relationship between Task and Tag](task_tag.png?raw=true)
+
+### Rspec code coverage
+![Code coverage](coverage.png?raw=true)
+
+### Security check using brakeman
+![Security check](brakeman.png?raw=true)
