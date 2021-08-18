@@ -15,15 +15,9 @@ class Api::V1::TagsController < ApplicationController
     tag.update!(tag_param)
     render json: tag
   end
-
-  # def destroy
-  #   tag = Tag.find(params[:id])
-  #   tag.destroy
-  #   head :no_content, status: :ok
-  # end
   
   private
     def tag_param
-      params.require(:tag).permit(:title)
+      params.require(:tag).permit(:title, :id)
     end  
 end

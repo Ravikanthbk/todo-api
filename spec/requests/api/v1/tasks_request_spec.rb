@@ -256,15 +256,15 @@ describe "Tasks API" do
   context "get /api/v1/tasks (final list)" do
 
     it "response to be successfull with Array list of tags" do
-      task1 = create(:task, {title: 'Wash laundry'})
+      task1 = create(:task_tags, {title: 'Wash laundry'})
       task1.tags.find_or_create_by(title: "Home")
       task1.tags.find_or_create_by(title: "Today")
 
-      task2 = create(:task, {title: 'Prepare Q1 report'})
+      task2 = create(:task_tags, {title: 'Prepare Q1 report'})
       task2.tags.find_or_create_by(title: "Today")
       task2.tags.find_or_create_by(title: "Work")
 
-      task3 = create(:task, {title: 'Do Homework well'})
+      task3 = create(:task_tags, {title: 'Do Homework well'})
       task3.tags.find_or_create_by(title: "Home")
       task3.tags.find_or_create_by(title: "Urgent")
       
@@ -272,12 +272,14 @@ describe "Tasks API" do
 
       get '/api/v1/tasks', headers: headers
       body = JSON.parse response.body
-      # puts "=======> #{body.inspect}"
       # puts "=======> #{body.first.collect{|x| x["tags"]}}"
+      # puts "=======> #{body.first.collect{|x| x["tags"].each{|tag| tag.collect(&:title)}}}"
 
       expect(response).to have_http_status :ok
       expect(body.first.map{|x| x["title"]}).to eq ["Wash laundry", "Prepare Q1 report", "Do Homework well"]
-      # expect(body.first.map{|x| x["tags"]}).to eq ["Wash laundry", "Prepare Q1 report", "Do Homework well"]
+      expect(task1.tags.collect(&:title)).to eq ["Home", "Today"]
+      expect(task2.tags.collect(&:title)).to eq ["Work", "Today"]
+      expect(task3.tags.collect(&:title)).to eq  ["Urgent", "Home"]
     end
 
   end
