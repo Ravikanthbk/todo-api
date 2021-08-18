@@ -5,17 +5,11 @@ class ApplicationService
 
   private
 
-  def find_or_create_tags(tags = [], task)
-    tags.each do |tag_title|      
-      tag = Tag.find_by_title(tag_title)
-      unless tag.nil?
-        task_tags = task.tags.collect(&:title).include?(tag.title)
-        unless task_tags
-          task.tags << tag
-        end        
-      else
-        task.tags.create(title: tag_title)
-      end
+  def find_or_create_tags(tags = [], task)  
+    tags_exist = Tag.where(:title => tags) unless tags.size.eql?(0)
+    tags.each do |tag_title|
+      matched_tag = tags_exist.find { |tag| tag.title.eql?(tag_title) }
+      matched_tag.nil? ? task.tags.create(title: tag_title) : task.tags << matched_tag    
     end
   end  
 end
