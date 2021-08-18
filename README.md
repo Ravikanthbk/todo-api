@@ -31,9 +31,9 @@ Things you may want to cover:
   - Implemented brakeman - Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
 
   ### Refactor
-    - Refactore with Service Objects
+    - Refactor with Service Objects
     - Implemented Private methods wherever required
-    - Fixe N+1 quesries issue
+    - Fix N+1 quesries issue
 
 ### ER Diagram
 ![Relationship between Task and Tag](task_tag.png?raw=true)
