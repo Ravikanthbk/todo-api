@@ -40,6 +40,7 @@ Things you may want to cover:
     - Implement mem / Redis cache
     - Performace test to check the performace of the application
     - Implement bullet gem to check N+1 query issues in the application
+    - Find Big-O complexity
 
 ### ER Diagram
 ![Relationship between Task and Tag](task_tag.png?raw=true)
