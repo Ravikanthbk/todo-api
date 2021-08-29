@@ -10,7 +10,7 @@ Things you may want to cover:
 ### Rails version: 6.0.4
 
 ### System configuration
-  - Linxu / Mac
+  - Linux / Mac
   - Run 'bundle install' in the root folder to install all the application related dependencies
 
 ### Database creation
@@ -20,6 +20,7 @@ Things you may want to cover:
   - bin/rails db:migrate
 
 ### How to run the test suite
+  -- bin/rails db:test:prepare
   -- bundle exec rspec
 
 ### Documentation:
@@ -33,7 +34,12 @@ Things you may want to cover:
   ### Refactor
     - Refactor with Service Objects
     - Implemented Private methods wherever required
-    - Fix N+1 quesries issue
+    - Fix N+1 queries issue
+
+  ### Todo: Pending
+    - Implement mem / Redis cache
+    - Performace test to check the performace of the application
+    - Implement bullet gem to check N+1 query issues in the application
 
 ### ER Diagram
 ![Relationship between Task and Tag](task_tag.png?raw=true)
