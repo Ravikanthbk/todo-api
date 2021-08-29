@@ -12,6 +12,8 @@ class ApplicationController < ActionController::API
   # rescue_from ::Exception, with: :error_occurred 
   
   
+  private
+  
   # Pagination meta data
   def paginate(collection, vars={})
       pagy, paginated = pagy(collection, vars)

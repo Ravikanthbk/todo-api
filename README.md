@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-### Ruby version: 2.6.6
+### Ruby version: 2.7.1
 
 ### Rails version: 6.0.4
 
@@ -29,6 +29,11 @@ Things you may want to cover:
   - Implemented API pagination for Task and Tags API's using pagy & pager_api light weight gems
   - Implemented rubocop - Automatic Rails code style checking tool. A RuboCop extension focused on enforcing Rails best  practices and coding conventions.
   - Implemented brakeman - Brakeman detects security vulnerabilities in Ruby on Rails applications via static analysis
+
+  ### Refactor
+    - Refactor with Service Objects
+    - Implemented Private methods wherever required
+    - Fix N+1 quesries issue
 
 ### ER Diagram
 ![Relationship between Task and Tag](task_tag.png?raw=true)
